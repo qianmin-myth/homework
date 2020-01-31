@@ -23,16 +23,17 @@ DROP TABLE IF EXISTS `homework`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `homework` (
-  `Id` int(11) NOT NULL,
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
   `Img` varchar(45) NOT NULL,
   `Title` varchar(45) NOT NULL,
   `Name` varchar(45) NOT NULL,
-  `Desc` varchar(45) DEFAULT NULL,
+  `Des` varchar(45) DEFAULT NULL,
   `Classify` varchar(45) NOT NULL,
   `IsDownload` varchar(45) NOT NULL DEFAULT '0',
   `Empower` varchar(45) NOT NULL,
-  UNIQUE KEY `id_UNIQUE` (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  PRIMARY KEY (`Id`),
+  UNIQUE KEY `Id_UNIQUE` (`Id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,9 +42,13 @@ CREATE TABLE `homework` (
 
 LOCK TABLES `homework` WRITE;
 /*!40000 ALTER TABLE `homework` DISABLE KEYS */;
-INSERT INTO `homework` VALUES (1,'2','3','4','5','6','0','7');
+INSERT INTO `homework` VALUES (2,'1','2','3','4','5','3','8'),(4,'1','2','3','4','5','2','7'),(5,'1','2','3','4','5','1','7'),(6,'1','2','3','4','5','6','7'),(9,'1','2','3','4','5','6','7');
 /*!40000 ALTER TABLE `homework` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Dumping events for database 'homework'
+--
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -54,4 +59,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-01-16 14:37:44
+-- Dump completed on 2020-01-31 10:30:55
